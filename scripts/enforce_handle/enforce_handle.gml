@@ -1,6 +1,8 @@
 /**
  * @func
- * @desc
+ * @desc Checks if the specified value is a handle. If so, the handle is returned, otherwise,
+ * EXC_INVALID_ARGUMENT is thrown.
+ * @param {any} h the value to check
  * @return {id}
  */
 function enforce_handle(h) {

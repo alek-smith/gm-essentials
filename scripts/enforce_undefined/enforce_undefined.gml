@@ -1,6 +1,8 @@
 /**
  * @func
- * @desc
+ * @desc Checks if the specified value is NULL (undefined). If so, NULL is returned, otherwise,
+ * EXC_INVALID_ARGUMENT is thrown.
+ * @param {any} und the value to check
  * @return {undefined}
  */
 function enforce_undefined(und) {

@@ -1,6 +1,8 @@
 /**
  * @func
- * @desc
+ * @desc Checks if the specified value is a boolean. If so, the boolean is returned, otherwise,
+ * EXC_INVALID_ARGUMENT is thrown.
+ * @param {any} b the value to check
  * @return {bool}
  */
 function enforce_bool(b) {

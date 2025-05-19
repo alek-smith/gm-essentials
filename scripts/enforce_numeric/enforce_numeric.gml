@@ -1,6 +1,8 @@
 /**
  * @func
- * @desc
+ * @desc Checks if the specified value is numeric. If so, the value is returned, otherwise,
+ * EXC_INVALID_ARGUMENT is thrown.
+ * @param {any} n the value to check
  * @return {real}
  */
 function enforce_numeric(n) {

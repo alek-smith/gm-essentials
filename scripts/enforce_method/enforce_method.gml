@@ -1,6 +1,8 @@
 /**
  * @func
- * @desc
+ * @desc Checks if the specified value is a method. If so, the method is returned, otherwise,
+ * EXC_INVALID_ARGUMENT is thrown.
+ * @param {any} m the value to check
  * @return {function}
  */
 function enforce_method(m) {

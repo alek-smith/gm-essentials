@@ -1,7 +1,8 @@
 /**
  * @func
- * @desc
- * @param {any} arr
+ * @desc Checks if the specified value is an array. If so, the array is returned, otherwise,
+ * EXC_INVALID_ARGUMENT is thrown.
+ * @param {any} arr the value to check
  * @return {array<any>}
  */
 function enforce_array(arr, permitUndef=false) {

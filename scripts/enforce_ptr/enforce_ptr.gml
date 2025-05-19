@@ -1,6 +1,7 @@
 /**
  * @func
- * @desc
+ * @desc Checks if the specified value is a pointer. If so, the pointer is returned, otherwise,
+ * EXC_INVALID_ARGUMENT is thrown.
  * @return {pointer}
  */
 function enforce_ptr(p) {
