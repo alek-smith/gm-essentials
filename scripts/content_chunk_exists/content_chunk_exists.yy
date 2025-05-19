@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"content_chunk_exists",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"content_chunk_exists",
+  "parent":{
+    "name":"content",
+    "path":"folders/Essentials/Scripts/content.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

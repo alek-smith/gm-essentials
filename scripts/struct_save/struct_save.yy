@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"struct_save",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"struct_save",
+  "parent":{
+    "name":"struct",
+    "path":"folders/Essentials/Scripts/struct.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

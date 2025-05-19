@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"essentials_macros",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"essentials_macros",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

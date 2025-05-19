@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"strbuf_",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"strbuf_",
+  "parent":{
+    "name":"strbuf",
+    "path":"folders/Essentials/Scripts/strbuf.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

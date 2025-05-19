@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"random_boolean",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"random_boolean",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"buffer_dereference",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"buffer_dereference",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

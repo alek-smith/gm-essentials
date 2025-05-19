@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"content_get_entity_names",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"content_get_entity_names",
+  "parent":{
+    "name":"content",
+    "path":"folders/Essentials/Scripts/content.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

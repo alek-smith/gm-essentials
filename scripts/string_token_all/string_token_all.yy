@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"string_token_all",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"string_token_all",
+  "parent":{
+    "name":"string",
+    "path":"folders/Essentials/Scripts/string.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

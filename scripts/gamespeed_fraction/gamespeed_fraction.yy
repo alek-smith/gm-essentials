@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"gamespeed_fraction",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gamespeed_fraction",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

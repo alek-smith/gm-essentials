@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"dbg_section_generate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"dbg_section_generate",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

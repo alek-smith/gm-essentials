@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"hex_string_to_real",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"hex_string_to_real",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

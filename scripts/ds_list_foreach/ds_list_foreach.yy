@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ds_list_foreach",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ds_list_foreach",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ContentEntity",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ContentEntity",
+  "parent":{
+    "name":"Constructors",
+    "path":"folders/Essentials/Constructors.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

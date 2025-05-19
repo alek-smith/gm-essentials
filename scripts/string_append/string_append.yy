@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"string_append",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"string_append",
+  "parent":{
+    "name":"string",
+    "path":"folders/Essentials/Scripts/string.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

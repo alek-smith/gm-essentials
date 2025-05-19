@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"LogMessage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LogMessage",
+  "parent":{
+    "name":"Constructors",
+    "path":"folders/Essentials/Constructors.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

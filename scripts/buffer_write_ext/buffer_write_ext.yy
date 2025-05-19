@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"buffer_write_ext",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"buffer_write_ext",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

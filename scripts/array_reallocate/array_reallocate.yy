@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"array_reallocate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"array_reallocate",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

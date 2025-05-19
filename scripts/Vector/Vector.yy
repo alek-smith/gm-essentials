@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Vector",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Vector",
+  "parent":{
+    "name":"Constructors",
+    "path":"folders/Essentials/Constructors.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

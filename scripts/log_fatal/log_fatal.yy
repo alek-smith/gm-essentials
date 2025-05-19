@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"log_fatal",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"log_fatal",
+  "parent":{
+    "name":"log",
+    "path":"folders/Essentials/Scripts/log.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

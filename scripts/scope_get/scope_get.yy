@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scope_get",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scope_get",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

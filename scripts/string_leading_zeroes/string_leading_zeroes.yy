@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"string_leading_zeroes",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"string_leading_zeroes",
+  "parent":{
+    "name":"string",
+    "path":"folders/Essentials/Scripts/string.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

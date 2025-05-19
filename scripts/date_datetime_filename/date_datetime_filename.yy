@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"date_datetime_filename",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"date_datetime_filename",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

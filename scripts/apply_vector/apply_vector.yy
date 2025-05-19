@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"apply_vector",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"apply_vector",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

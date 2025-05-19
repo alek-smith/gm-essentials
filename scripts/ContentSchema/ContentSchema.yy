@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ContentSchema",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ContentSchema",
+  "parent":{
+    "name":"Constructors",
+    "path":"folders/Essentials/Constructors.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"content_load",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"content_load",
+  "parent":{
+    "name":"content",
+    "path":"folders/Essentials/Scripts/content.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

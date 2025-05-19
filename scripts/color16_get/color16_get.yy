@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"color16_get",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"color16_get",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

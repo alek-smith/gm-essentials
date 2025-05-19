@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"dbg_view_generate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"dbg_view_generate",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

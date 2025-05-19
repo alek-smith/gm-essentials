@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"check_bounds",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"check_bounds",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"content_clear",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"content_clear",
+  "parent":{
+    "name":"content",
+    "path":"folders/Essentials/Scripts/content.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

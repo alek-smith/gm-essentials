@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"dbg_labeled_variable",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"dbg_labeled_variable",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Essentials/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

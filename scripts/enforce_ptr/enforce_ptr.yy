@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"enforce_ptr",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enforce_ptr",
+  "parent":{
+    "name":"enforce",
+    "path":"folders/Essentials/Scripts/enforce.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
