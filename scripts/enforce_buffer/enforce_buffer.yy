@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"enforce_buffer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enforce_buffer",
+  "parent":{
+    "name":"enforce",
+    "path":"folders/Essentials/Scripts/enforce.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
