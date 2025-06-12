@@ -1,8 +1,9 @@
 /**
  * @desc Initializes the global ContentRepository. This function does nothing on subsequent calls.
- * @param {string} schemaFile the location of the schema file (def. "content/schema.json")
+ * By default, the ContentRepository will have no chunks or entities, but will have defined schema.
+ * @param {string} schemaFile the location of the schema file
  */
-function content_init(schemaFile="content/schema.json") {
+function content_init(schemaFile) {
     
     static schema = NULL;
     static repo = NULL;
@@ -20,7 +21,13 @@ function content_init(schemaFile="content/schema.json") {
     static_set(schema, static_get(ContentSchema));
     
     // process entities and their properties
-    var entityNames = struct_get_names(schema.entities);
+    var entityNames;
+	try {
+		entityNames = struct_get_names(schema.entities);
+	} catch (e) {
+		throw new RuntimeException(EXC_MALFORMED_CONTENT_SCHEMA, "entities field is missing");
+	}
+	
     for (var i = 0; i < array_length(entityNames); i++) {
         var entity = schema.entities[$ entityNames[i]];
         var mapperIndex = asset_get_index(entity.mapper);

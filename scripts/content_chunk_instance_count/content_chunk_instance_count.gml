@@ -7,7 +7,7 @@
 function content_chunk_instance_count(chunk) {
 
     if (!content_is_initialized()) {
-        return -1;
+        return CONTENT_ERR_NOT_INITIALIZED;
     }
     
     var instanceList = ds_map_find_value(content_init.repo.instances, chunk);

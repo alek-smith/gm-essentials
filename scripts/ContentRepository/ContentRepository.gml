@@ -1,5 +1,6 @@
 /**
- * @desc
+ * @desc The singleton struct used for the global content repository. Stores chunks and the
+ * entities within those chunks.
  */
 function ContentRepository() constructor {
 

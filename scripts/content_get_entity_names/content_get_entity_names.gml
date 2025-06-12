@@ -1,6 +1,6 @@
 /**
  * @desc Retrieves a list of entity names.
- * @return {array<string>}
+ * @return {array<string>|array}
  */
 function content_get_entity_names() {
 
