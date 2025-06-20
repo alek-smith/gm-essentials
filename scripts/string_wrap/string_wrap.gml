@@ -1,27 +1,39 @@
 
-/// @param {string} text
-/// @param {real} width
-/// @param {string} delims
-/// @param {asset.GMFont} [font]
-/// @return {string}
+/**
+ * @desc Wraps a string to prevent it from exceeding the specified width by placing line break characters
+ * ('\n') in the string. This function does not split the same word between lines; if a word would cause
+ * the string to exceed the maximum width, it is moved to the next line. This is done by replacing the
+ * final whitespace character before the "overflow" word with a line break. This function can also optionally
+ * ignore certain chracters in the string, excluding any occurances of them from the width calculation.
+ * @param {string} text the string to wrap
+ * @param {real} width the maximum width -- the wrapped string will never exceed this width
+ * @param {string} [delims] a string of characters for this function to ignore (def. "")
+ * @param {asset.GMFont} [font] the font to use when calculating character widths (def. draw_get_font())
+ * @return {string}
+ */
 function string_wrap(text, width, delims="", font=draw_get_font()) {
 
-	if (string_length(delims) != 0 && string_length(delims) != 2) {
-		throw new RuntimeException(EXC_ILLEGAL_ARGUMENT, "length of delims must be 0 or 2");
+	enforce_string(text);
+	enforce_numeric(width);
+	enforce_string(delims);
+	enforce_handle(font);
+	
+	if (!font_exists(font)) {
+		throw new RuntimeException(EXC_NO_SUCH_FONT);
 	}
 
 	var oldFont = draw_get_font();
 	draw_set_font(font);
 	var fontInfo = font_get_info(font);
 	
-	var char/*:string?*/ = NULL;
-	var cursor/*:int*/ = 1;
-	var newlineIndex/*:int*/ = -1; // index of last known whitespace char; where to place the newline
-	var lineWidth/*:int*/ = 0;
-	var maxWidth/*:int*/ = width;
-	var tokenWidth/*:int*/ = 0;
-	var charWidth/*:int*/ = fontInfo.glyphs[$ "H"].shift;
-	var token/*:string*/ = "";
+	var char = NULL;
+	var cursor = 1;
+	var newlineIndex = -1; // index of last known whitespace char; where to place the newline
+	var lineWidth = 0;
+	var maxWidth = width;
+	var tokenWidth = 0;
+	var charWidth = fontInfo.glyphs[$ "H"].shift;
+	var token = "";
 	
 	while (cursor < string_length(text)) {
 		
@@ -37,12 +49,9 @@ function string_wrap(text, width, delims="", font=draw_get_font()) {
 				lineWidth = 0;
 			}
 			
-		} else if (string_length(delims) > 0 && char == string_char_at(delims, 1)) {
+		} else if (string_contains_char(char, delims)) { // current char should be ignored according to delims
 			
-			while (cursor <= string_length(text) && char != string_char_at(delims, 2)) {
-				cursor++;
-				char = string_char_at(text, cursor);
-			}
+			cursor++;
 			
 		} else { // current char is NOT whitespace
 		
