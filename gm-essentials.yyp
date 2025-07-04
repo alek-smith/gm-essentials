@@ -128,6 +128,7 @@
     {"id":{"name":"string_accepts","path":"scripts/string_accepts/string_accepts.yy",},},
     {"id":{"name":"string_append","path":"scripts/string_append/string_append.yy",},},
     {"id":{"name":"string_contains_char","path":"scripts/string_contains_char/string_contains_char.yy",},},
+    {"id":{"name":"string_copy_until","path":"scripts/string_copy_until/string_copy_until.yy",},},
     {"id":{"name":"string_leading_zeroes","path":"scripts/string_leading_zeroes/string_leading_zeroes.yy",},},
     {"id":{"name":"string_replace_range","path":"scripts/string_replace_range/string_replace_range.yy",},},
     {"id":{"name":"string_token_all","path":"scripts/string_token_all/string_token_all.yy",},},
