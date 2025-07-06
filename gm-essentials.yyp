@@ -133,6 +133,7 @@
     {"id":{"name":"string_replace_range","path":"scripts/string_replace_range/string_replace_range.yy",},},
     {"id":{"name":"string_token_all","path":"scripts/string_token_all/string_token_all.yy",},},
     {"id":{"name":"string_token","path":"scripts/string_token/string_token.yy",},},
+    {"id":{"name":"string_wrap_ext","path":"scripts/string_wrap_ext/string_wrap_ext.yy",},},
     {"id":{"name":"string_wrap","path":"scripts/string_wrap/string_wrap.yy",},},
     {"id":{"name":"struct_copy","path":"scripts/struct_copy/struct_copy.yy",},},
     {"id":{"name":"struct_draw","path":"scripts/struct_draw/struct_draw.yy",},},
