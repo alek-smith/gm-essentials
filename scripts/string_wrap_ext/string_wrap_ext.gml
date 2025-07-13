@@ -39,7 +39,7 @@ function string_wrap_ext(text, width, cmp=NULL, font=draw_get_font()) {
 	var charWidth = fontInfo.glyphs[$ "H"].shift;
 	var token = "";
 	
-	while (cursor < string_length(text)) {
+	while (cursor <= string_length(text)) {
 		
 		char = string_char_at(text, cursor);
 		
@@ -55,7 +55,7 @@ function string_wrap_ext(text, width, cmp=NULL, font=draw_get_font()) {
 			
 		} else if (cmp != NULL && cmp(char)) { // current char should be ignored according to comparison function
 			
-			cursor++;
+			// do nothing
 			
 		} else { // current char is NOT whitespace
 		

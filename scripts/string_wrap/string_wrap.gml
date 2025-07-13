@@ -35,7 +35,7 @@ function string_wrap(text, width, delims="", font=draw_get_font()) {
 	var charWidth = fontInfo.glyphs[$ "H"].shift;
 	var token = "";
 	
-	while (cursor < string_length(text)) {
+	while (cursor <= string_length(text)) {
 		
 		char = string_char_at(text, cursor);
 		
@@ -51,7 +51,7 @@ function string_wrap(text, width, delims="", font=draw_get_font()) {
 			
 		} else if (string_contains_char(char, delims)) { // current char should be ignored according to delims
 			
-			cursor++;
+			// do nothing
 			
 		} else { // current char is NOT whitespace
 		
