@@ -22,7 +22,20 @@
 #macro APPSURF_WIDTH surface_get_width(application_surface)
 #macro APPSURF_HEIGHT surface_get_height(application_surface)
 
-
+// macro declaraction of typeof() types
+#macro TYPE_NUMBER "number"
+#macro TYPE_STRING "string"
+#macro TYPE_ARRAY "array"
+#macro TYPE_BOOL "bool"
+#macro TYPE_INT32 "int32"
+#macro TYPE_INT64 "int64"
+#macro TYPE_POINTER "ptr"
+#macro TYPE_UNDEFINED "undefined"
+#macro TYPE_NULL "null"
+#macro TYPE_METHOD "method"
+#macro TYPE_STRUCT "struct"
+#macro TYPE_HANDLE "ref"
+#macro TYPE_UNKNOWN "unknown"
 
 // exceptions
 #macro EXC_MANUAL						0x00000000
