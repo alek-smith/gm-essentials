@@ -1075,6 +1075,153 @@ function strbuf_width(sb) {
 }
 
 /**
+ * @desc String buffer equivalent of `string_wrap`. See the documentation for that function
+ * for more information.
+ * @param {id.Buffer} sb the string buffer
+ * @param {real} width the maximum width -- the wrapped string will never exceed this width
+ * @param {string} [delims] a string of characters for this function to ignore (def. "")
+ * @param {asset.GMFont} [font] the font to use when calculating character widths (def. draw_get_font())
+ */
+function strbuf_wrap(sb, width, delims="", font=draw_get_font()) {
+	
+	enforce_buffer(sb);
+	enforce_numeric(width);
+	enforce_string(delims);
+	enforce_handle(font);
+	
+	if (!font_exists(font)) {
+		throw new RuntimeException(EXC_NO_SUCH_FONT);
+	}
+
+	var oldFont = draw_get_font();
+	draw_set_font(font);
+	var fontInfo = font_get_info(font);
+	
+	var len = strbuf_length(sb);
+	var cursor = 0;
+	var char = NULL;
+	var newlineIndex = -1; // index of last known whitespace char; where to place the newline
+	var lineWidth = 0;
+	var maxWidth = width;
+	var tokenWidth = 0;
+	var charWidth = fontInfo.glyphs[$ "H"].shift;
+	var token = "";
+	
+	__strbuf_seek(sb, 0);
+	while (cursor <= len) {
+		
+		var tell = buffer_tell(sb);
+		char = __strbuf_get_current_char(sb);
+		
+		if (char_is_whitespace(char)) { // current char is whitespace
+		
+			newlineIndex = tell;
+			token = "";
+			tokenWidth = 0;
+			lineWidth += charWidth;
+			if (char == "\n") { // newline present in original text
+				lineWidth = 0;
+			}
+			
+		} else if (string_contains_char(char, delims)) { // current char should be ignored according to delims
+			
+			// do nothing
+			
+		} else { // current char is NOT whitespace
+		
+			token += char;
+			tokenWidth += charWidth;
+			lineWidth += charWidth;
+			
+			if (lineWidth > maxWidth) { // string too long, insert newline
+				buffer_poke_char(sb, newlineIndex, "\n");
+				lineWidth = tokenWidth;
+			}
+			
+		}
+		
+		cursor++;
+		
+	}
+	
+	draw_set_font(oldFont);
+	
+}
+/**
+ * @desc String buffer equivalent of `string_wrap_ext`. See the documentation for that function
+ * for more information.
+ * @param {id.Buffer} sb the string buffer
+ * @param {real} width the maximum width -- the wrapped string will never exceed this width
+ * @param {function} [cmp] a comparison function to determine whether or not certain characters should be ignored (def. NULL)
+ * @param {asset.GMFont} [font] the font to use when calculating character widths (def. draw_get_font())
+ */
+function strbuf_wrap_ext(sb, width, cmp=NULL, font=draw_get_font()) {
+	
+	enforce_buffer(sb);
+	enforce_numeric(width);
+	enforce_callable(cmp);
+	enforce_handle(font);
+	
+	if (!font_exists(font)) {
+		throw new RuntimeException(EXC_NO_SUCH_FONT);
+	}
+
+	var oldFont = draw_get_font();
+	draw_set_font(font);
+	var fontInfo = font_get_info(font);
+	
+	var len = strbuf_length(sb);
+	var cursor = 0;
+	var char = NULL;
+	var newlineIndex = -1; // index of last known whitespace char; where to place the newline
+	var lineWidth = 0;
+	var maxWidth = width;
+	var tokenWidth = 0;
+	var charWidth = fontInfo.glyphs[$ "H"].shift;
+	var token = "";
+	
+	__strbuf_seek(sb, 0);
+	while (cursor <= len) {
+		
+		var tell = buffer_tell(sb);
+		char = __strbuf_get_current_char(sb);
+		
+		if (char_is_whitespace(char)) { // current char is whitespace
+		
+			newlineIndex = tell;
+			token = "";
+			tokenWidth = 0;
+			lineWidth += charWidth;
+			if (char == "\n") { // newline present in original text
+				lineWidth = 0;
+			}
+			
+		} else if (cmp != NULL && cmp(char)) { // current char should be ignored according to delims
+			
+			// do nothing
+			
+		} else { // current char is NOT whitespace
+		
+			token += char;
+			tokenWidth += charWidth;
+			lineWidth += charWidth;
+			
+			if (lineWidth > maxWidth) { // string too long, insert newline
+				buffer_poke_char(sb, newlineIndex, "\n");
+				lineWidth = tokenWidth;
+			}
+			
+		}
+		
+		cursor++;
+		
+	}
+	
+	draw_set_font(oldFont);
+	
+}
+
+/**
  * @desc Internal helper function. Closes a "gap" in the data defined by the
  * specified offset and count. All bytes to the right of the specified range
  * are shifted to the left the number of times specified by count. This function
