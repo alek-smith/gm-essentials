@@ -28,7 +28,6 @@ function string_wrap_ext(text, width, cmp=NULL, font=draw_get_font()) {
 
 	var oldFont = draw_get_font();
 	draw_set_font(font);
-	var fontInfo = font_get_info(font);
 	
 	var char = NULL;
 	var cursor = 1;
@@ -36,14 +35,15 @@ function string_wrap_ext(text, width, cmp=NULL, font=draw_get_font()) {
 	var lineWidth = 0;
 	var maxWidth = width;
 	var tokenWidth = 0;
-	var charWidth = fontInfo.glyphs[$ "H"].shift;
+	var charWidth = 0;
 	var token = "";
 	
 	while (cursor <= string_length(text)) {
 		
 		char = string_char_at(text, cursor);
+		charWidth = string_width(char);
 		
-		if (char_is_whitespace(char)) { // current char is whitespace
+		if (char == " ") { // current char is whitespace
 		
 			newlineIndex = cursor;
 			token = "";

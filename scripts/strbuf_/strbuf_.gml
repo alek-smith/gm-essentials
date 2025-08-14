@@ -1095,7 +1095,6 @@ function strbuf_wrap(sb, width, delims="", font=draw_get_font()) {
 
 	var oldFont = draw_get_font();
 	draw_set_font(font);
-	var fontInfo = font_get_info(font);
 	
 	var len = strbuf_length(sb);
 	var cursor = 0;
@@ -1104,7 +1103,7 @@ function strbuf_wrap(sb, width, delims="", font=draw_get_font()) {
 	var lineWidth = 0;
 	var maxWidth = width;
 	var tokenWidth = 0;
-	var charWidth = fontInfo.glyphs[$ "H"].shift;
+	var charWidth = 0;
 	var token = "";
 	
 	__strbuf_seek(sb, 0);
@@ -1112,8 +1111,9 @@ function strbuf_wrap(sb, width, delims="", font=draw_get_font()) {
 		
 		var tell = buffer_tell(sb);
 		char = __strbuf_get_current_char(sb);
+		charWidth = string_width(char);
 		
-		if (char_is_whitespace(char)) { // current char is whitespace
+		if (char == " ") { // current char is whitespace
 		
 			newlineIndex = tell;
 			token = "";
@@ -1123,7 +1123,7 @@ function strbuf_wrap(sb, width, delims="", font=draw_get_font()) {
 				lineWidth = 0;
 			}
 			
-		} else if (string_contains_char(char, delims)) { // current char should be ignored according to delims
+		} else if (string_pos(char, delims) > 0) { // current char should be ignored according to delims
 			
 			// do nothing
 			
@@ -1168,7 +1168,6 @@ function strbuf_wrap_ext(sb, width, cmp=NULL, font=draw_get_font()) {
 
 	var oldFont = draw_get_font();
 	draw_set_font(font);
-	var fontInfo = font_get_info(font);
 	
 	var len = strbuf_length(sb);
 	var cursor = 0;
@@ -1177,7 +1176,7 @@ function strbuf_wrap_ext(sb, width, cmp=NULL, font=draw_get_font()) {
 	var lineWidth = 0;
 	var maxWidth = width;
 	var tokenWidth = 0;
-	var charWidth = fontInfo.glyphs[$ "H"].shift;
+	var charWidth = 0;
 	var token = "";
 	
 	__strbuf_seek(sb, 0);
@@ -1185,8 +1184,9 @@ function strbuf_wrap_ext(sb, width, cmp=NULL, font=draw_get_font()) {
 		
 		var tell = buffer_tell(sb);
 		char = __strbuf_get_current_char(sb);
+		charWidth = string_width(char);
 		
-		if (char_is_whitespace(char)) { // current char is whitespace
+		if (char == " ") { // current char is whitespace
 		
 			newlineIndex = tell;
 			token = "";

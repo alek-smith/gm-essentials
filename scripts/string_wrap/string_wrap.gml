@@ -12,7 +12,7 @@
  * @return {string}
  */
 function string_wrap(text, width, delims="", font=draw_get_font()) {
-
+	
 	enforce_string(text);
 	enforce_numeric(width);
 	enforce_string(delims);
@@ -24,7 +24,6 @@ function string_wrap(text, width, delims="", font=draw_get_font()) {
 
 	var oldFont = draw_get_font();
 	draw_set_font(font);
-	var fontInfo = font_get_info(font);
 	
 	var char = NULL;
 	var cursor = 1;
@@ -32,14 +31,15 @@ function string_wrap(text, width, delims="", font=draw_get_font()) {
 	var lineWidth = 0;
 	var maxWidth = width;
 	var tokenWidth = 0;
-	var charWidth = fontInfo.glyphs[$ "H"].shift;
+	var charWidth = 0;
 	var token = "";
 	
 	while (cursor <= string_length(text)) {
 		
 		char = string_char_at(text, cursor);
+		charWidth = string_width(char);
 		
-		if (char_is_whitespace(char)) { // current char is whitespace
+		if ((char == " ")) { // current char is whitespace
 		
 			newlineIndex = cursor;
 			token = "";
@@ -49,7 +49,7 @@ function string_wrap(text, width, delims="", font=draw_get_font()) {
 				lineWidth = 0;
 			}
 			
-		} else if (string_contains_char(char, delims)) { // current char should be ignored according to delims
+		} else if (string_pos(char, delims) > 0) { // current char should be ignored according to delims
 			
 			// do nothing
 			
