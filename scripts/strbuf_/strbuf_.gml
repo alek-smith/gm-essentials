@@ -1186,7 +1186,7 @@ function strbuf_wrap_ext(sb, width, cmp=NULL, font=draw_get_font()) {
 		char = __strbuf_get_current_char(sb);
 		charWidth = string_width(char);
 		
-		if (char == " ") { // current char is whitespace
+		if (char == " " || char == "\n") { // current char is whitespace
 		
 			newlineIndex = tell;
 			token = "";

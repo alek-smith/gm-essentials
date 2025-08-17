@@ -43,7 +43,7 @@ function string_wrap_ext(text, width, cmp=NULL, font=draw_get_font()) {
 		char = string_char_at(text, cursor);
 		charWidth = string_width(char);
 		
-		if (char == " ") { // current char is whitespace
+		if (char == " " || char == "\n") { // current char is whitespace
 		
 			newlineIndex = cursor;
 			token = "";
